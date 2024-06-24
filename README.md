@@ -46,7 +46,7 @@ To aide in the replication, we have made available the following materials;
 1. Scenario descriptions, with a sequence diagram and a data flow diagram
 2. List of threats, one from the Kubernetes scenario and one from the GitHub scenario
 3. Sample entry questionnaire
-4. Sample participants report and exit questionnaire
+4. Sample experiment survey
 5. python notebook (to be updated once we have replicated it with practitioners)
 
 ## How to cite us
@@ -60,7 +60,7 @@ This is the root directory of the repository. The directory is structured as fol
 
     template-replication-package
      .
-     |--- data/                            Contains sample data obtained from participants reports. All identifiable information has been removed.
+     |--- data/                            Contains sample survey flow, both entry questionnaire and actual study. All identifiable information has been removed.
      |
      |--- documentation/                   Contains the scenario description for each experiement, and the list of threats adopted from each scenario.
      |
