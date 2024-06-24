@@ -1,5 +1,5 @@
-# The role of Data Flow Diagrams in validating identified security threats- Replication package
-This repository contains the data used to execute a control experiement to measure the role of a data flow diagram in validating security threats. The experiement was conducted in two universities, in the Netherlands and China.
+# Usefulness of data flow diagrams and large language models for security threat validation: a registered report
+This repository contains the data used to execute a pilot control experiment to measure the effectiveness of LLMs to validate security threats. The experiment was conducted with MSC students enrolled in a computer science program
 
 ### How to Cite us
 The scientific article describing design, execution, and main results of this study is available here.
@@ -24,14 +24,21 @@ If this study is helping your research, consider to cite it is as follows, thank
 
 ### General overview
 Several steps were followed in it's execution. 
-First we prepared all textual materials. This included choosing relevant but comparable scenarios. To this end, we presented a kubernetes and a GitHub scenario for the first and confirming experiments. To further make the student's background knowledge comparable , for the subjects relevant to this study (security and the domains of the selected scenarios), we developed training videos.
-From the scenarios, we compiled 10 threats, each containing a unique thretad ID, threat description, assumption, affected components, and an associated STRIDE threat type. 5 of the threats were real and 5 were fabricated.
-Additional reading materials, selcted book chapters on STRIDE were also made availabe.
+First we prepared all textual materials. This included choosing relevant but comparable scenarios. To this end, we presented a kubernetes and a GitHub scenario, randomly. To further make the student's background knowledge comparable , for the subjects relevant to this study (security and the domains of the selected scenarios), we developed training videos.
+From the scenarios, we compiled 10 threats, each containing a unique threat ID, threat description, assumption, affected data flow diagram (DFD) components, and an associated STRIDE threat type. 5 of the threats were real and 5 were fabricated.
 
-To measure the role of the data flow diagram in validating threats, we proposed comparing it to a process diagram, a sequence diagram. To this end, we defined two treatment group. Intervention received both the DFD and sequence diagram while control group received only a sequence diagram.
+
+To measure which additional anaysiss materials are necessary t effectively and efficiently validate threats, we defined two intervention, prescence of a data flow diagram (of the scenarios) as part of the handout material, and tasked to assess the correctness of security threats with a Large Language Model
+
+
+In addition, we defined for treatment groups;
+  1) LLM + DFD (A) receives the scenario descriptions with an accompanying data flow diagram instance and tasked with assessing the applicability of threats using an LLM
+  2) noLLM + DFD (B) receives the scenario descriptions with an accompanying data flow diagram instance and tasked with self-assessing the applicability of threats
+  3) LLM + noDFD (C) receives the scenario description without an accompanying data flow diagram instance and tasked with assessing the applicability of threats using an LLM
+  4) noLLM + noDFD (D) receives the scenario description without an accompanying data flow diagram instance and tasked with self-assessing the applicability of threats
 
 ### The Task
-From the list of threats, the participants were required to identify/choose the actual threats.
+From the list of threats, the participants were required to identify/choose the actual threats (either with the help of an LLM or self-assess).
 
 
 ### Available material for replication
@@ -40,19 +47,11 @@ To aide in the replication, we have made available the following materials;
 2. List of threats, one from the Kubernetes scenario and one from the GitHub scenario
 3. Sample entry questionnaire
 4. Sample participants report and exit questionnaire
-5. python notebook
+5. python notebook (to be updated once we have replicated it with practitioners)
 
 ## How to cite us
 To be updated
 
-
-### Getting started
-To execute the python file:
-1. First dowload the "sample participants report and exit questionnaire" file. The format of the csv file is the same as the one used during this data analysis.
-2. Add the csv file to your Google drive
-3. Open the .ipynb file and follow the specified steps. 
-4. Change the drive directory and the file name of the downloaded csv sheet 
-5. All relevant python packages have already been pre-defined where necessary
 
 
 
@@ -65,7 +64,7 @@ This is the root directory of the repository. The directory is structured as fol
      |
      |--- documentation/                   Contains the scenario description for each experiement, and the list of threats adopted from each scenario.
      |
-     |--- src/                             Contains the python notebook with a step-by-step analysis of the data obtained from participants. We did not provide the actual data used in analysis, however, the data format follows the same columns contained in the excel files uploaded in the "Data folder" in this repository. 
+     |--- src/                             WIll contain the python files used to analyse and report the results 
     
     
      
